@@ -3,7 +3,7 @@
 
 
     <string name="action_settings">Settings</string>
-    <string name="quantity_title">QUANTITY</string>
+    <string name="quantity_title">Quantity</string>
     <string name="quantity">0</string>
-    <string name="button">ORDER</string>
+    <string name="button">Order</string>
 </resources>
