@@ -12,7 +12,7 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     private final int PRICE;
-    int quantity;
+    private int quantity;
 
     public MainActivity() {
         PRICE = 5;
