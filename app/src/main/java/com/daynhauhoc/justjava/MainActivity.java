@@ -11,11 +11,20 @@ import java.text.NumberFormat;
 
 
 public class MainActivity extends AppCompatActivity {
+    private final int PRICE;
+    int quantity;
+
+    public MainActivity() {
+        PRICE = 5;
+        quantity = 2;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        submitOrder(null);
     }
 
     @Override
@@ -44,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display(2);
-        displayPrice(2 * 5);
+        display(quantity);
+        displayPrice(quantity * PRICE);
     }
 
     /**
@@ -63,5 +72,24 @@ public class MainActivity extends AppCompatActivity {
     private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+    }
+
+    /**
+     * This method is called when the increment button is clicked.
+     */
+    public void increment(View view) {
+        quantity++;
+        submitOrder(null);
+    }
+
+    /**
+     * This method is called when the decrement button is clicked.
+     */
+    public void decrement(View view) {
+        if (quantity == 0)
+            return;
+
+        quantity--;
+        submitOrder(null);
     }
 }
