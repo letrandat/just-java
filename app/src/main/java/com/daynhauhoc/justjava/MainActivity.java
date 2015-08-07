@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
         displayQuantity(quantity);
-        displayPrice(calculatePrice(quantity));
+        createOrderSummary(calculatePrice(quantity));
     }
 
     /**
@@ -82,6 +82,14 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         String priceMessage = "Total "
                 + NumberFormat.getCurrencyInstance().format(number)
+                + "\nThank you!";
+        priceTextView.setText(priceMessage);
+    }
+
+    private void createOrderSummary(int price) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        String priceMessage = "Quantity: " + quantity
+                + "\nTotal " + NumberFormat.getCurrencyInstance().format(price)
                 + "\nThank you!";
         priceTextView.setText(priceMessage);
     }
