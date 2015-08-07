@@ -75,17 +75,6 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
-    /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        String priceMessage = "Total "
-                + NumberFormat.getCurrencyInstance().format(number)
-                + "\nThank you!";
-        priceTextView.setText(priceMessage);
-    }
-
     private void createOrderSummary(int price) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         String priceMessage = "Quantity: " + quantity

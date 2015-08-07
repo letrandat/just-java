@@ -6,6 +6,8 @@
     <string name="quantity_title">Quantity</string>
     <string name="quantity">0</string>
     <string name="button">Order</string>
-    <string name="price_title">Price</string>
+    <string name="order_summary_text_view">Order Summary</string>
     <string name="price">0</string>
+    <string name="increase">+</string>
+    <string name="decrease">-</string>
 </resources>
