@@ -50,11 +50,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Calculates the price of the order based on the current quantity.
+     *
+     * @return the price
+     */
+    private int calculatePrice(int quantity) {
+        return quantity * PRICE;
+    }
+
+    /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
         displayQuantity(quantity);
-        displayPrice(quantity * PRICE);
+        displayPrice(calculatePrice(quantity));
     }
 
     /**
